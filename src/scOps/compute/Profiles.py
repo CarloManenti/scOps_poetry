@@ -92,7 +92,7 @@ def Profiles(adata,
         # proper formatting for Pandas DataFrame
         profiles = pd.DataFrame.sparse.from_spmatrix(weighted_profiles.T)
         profiles.columns = [str(profile) for profile in profiles.columns]
-        profiles.columns = [str(c) for c in profiles.columns] # force string names instead of floats
+        profiles.columns = profiles.columns.astype('str') # force string names instead of floats
         profiles.index = adata.var_names
 
     else : 
