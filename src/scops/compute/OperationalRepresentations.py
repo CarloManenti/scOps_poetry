@@ -1,7 +1,7 @@
 # package specific function
-from scops.compute.BOGs import BOGs
-from scops.compute.Profiles import Profiles
-from scops.compute.Signatures import Signatures
+from scOps.compute.BOGs import BOGs
+from scOps.compute.Profiles import Profiles
+from scOps.compute.Signatures import Signatures
 
 def OperationalRepresentations(adata, 
     group,

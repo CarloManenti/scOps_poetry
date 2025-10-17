@@ -1,6 +1,6 @@
 # package specific function 
 import pandas as pd 
-from scops.helper._gettoporbottom_ import _gettoporbottom_
+from scOps.helper._gettoporbottom_ import _gettoporbottom_
 
 def GetTopOrBottom(df,
     column,

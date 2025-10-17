@@ -1,8 +1,8 @@
 # package specific function
 import scanpy as sc
-from scops.helper.FilterBOGs import FilterBOGs
-from scops.helper.Dictionary2Memership import Dictionary2Memership
-from scops.helper._panda_in_var_ import _panda_in_var_
+from scOps.helper.FilterBOGs import FilterBOGs
+from scOps.helper.Dictionary2Memership import Dictionary2Memership
+from scOps.helper._panda_in_var_ import _panda_in_var_
 
 # BOGs
 def BOGs(adata,

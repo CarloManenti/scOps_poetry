@@ -1,4 +1,4 @@
-from scops import compute, helper
+from scOps import compute, helper
 
 __all__ = [
     'compute',

@@ -1,5 +1,5 @@
-from scops.helper._panda_in_var_ import _panda_in_var_
-from scops.helper.GetRepresentation import GetRepresentation
+from scOps.helper._panda_in_var_ import _panda_in_var_
+from scOps.helper.GetRepresentation import GetRepresentation
 
 
 # signatures 
