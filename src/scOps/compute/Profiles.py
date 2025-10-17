@@ -92,8 +92,8 @@ def Profiles(adata,
         # proper formatting for Pandas DataFrame
         profiles = pd.DataFrame.sparse.from_spmatrix(weighted_profiles.T)
         profiles.columns = [str(profile) for profile in profiles.columns]
-        profiles.columns = profiles.columns.astype('str') # force string names instead of floats
         profiles.index = adata.var_names
+        profiles.columns = profiles.columns.astype('str') # force string names instead of floats
 
     else : 
         raise(ValueError('please specify a field in .obs or .obsm'))
