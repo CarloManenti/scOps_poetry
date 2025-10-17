@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # package specific function
-from scops.helper._panda_in_var_ import _panda_in_var_
+from scOps.helper._panda_in_var_ import _panda_in_var_
 
 def Profiles(adata, 
     group,
