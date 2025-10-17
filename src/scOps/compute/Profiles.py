@@ -109,5 +109,6 @@ def Profiles(adata,
     #adata = _panda_in_var_(adata, profiles, field_name = field_name, group_names = group_names)
             
     adata.varm[field_name] = profiles
+    adata.varm[field_name] = adata.varm[field_name].columns.astype('str') # force string names instead of floats
 
     return(adata)
