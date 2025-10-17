@@ -76,12 +76,12 @@ def Profiles(adata,
     elif group in adata.obsm : 
         # scaling
         # scaling between 0 and 1 the contribution of each prototype to any given cell
-        prototypes = adata.obsm[group] 
-        # matrix operation goes speed! 
-        scaled_prototypes = prototypes.T @ np.diag(1 / prototypes.sum(axis = 1))
+        prototypes = adata.obsm[group].copy() #cells x prototypes
+        # matrix operation goes speed! normalisation to have each prototype to sum to 1 across cells 
+        scaled_prototypes = prototypes.T @ np.diag(1 / prototypes.sum(axis = 1)) # prototypes x cells
 
         # weight 
-        expression = adata.layers[layer]
+        expression = adata.layers[layer] # cells x genes
         weighted = csr_matrix(scaled_prototypes) @ expression # both sparse 
 
         # mean 
@@ -92,6 +92,7 @@ def Profiles(adata,
         # proper formatting for Pandas DataFrame
         profiles = pd.DataFrame.sparse.from_spmatrix(weighted_profiles.T)
         profiles.columns = [str(profile) for profile in profiles.columns]
+        profiles.columns = [str(c) for c in profiles.columns] # force string names instead of floats
         profiles.index = adata.var_names
 
     else : 

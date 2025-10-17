@@ -121,7 +121,7 @@ def BOGs(adata,
         # this is stupid but it does not break: converting to pandas 
         adata.obs[group] = adata.obs[group].astype(str).astype('category')
 
-    # Differential Expression Anlysis 
+    # Differential Expression Analysis 
     if verbose : 
         print(f'performing differential expression analysis')
     sc.tl.rank_genes_groups(adata, groupby = group, layer = layer, method = method, corr_method = correction, pts = True, use_raw = False, **kwargs)

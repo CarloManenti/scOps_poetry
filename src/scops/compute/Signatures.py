@@ -57,7 +57,7 @@ def Signatures(adata,
 
     # faster way to compute signatures 
     #n = len(profiles.columns)
-    n_mean = profiles.mean(axis = 1) #* n #TODO test 
+    n_mean = profiles.mean(axis = 1)
     signatures = profiles.sub(n_mean, axis = 0)
     # splitting by groups 
     signature_groups = [col_name.split(profile_field)[-1] for col_name in signatures.columns]
