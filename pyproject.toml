@@ -30,4 +30,4 @@ dependencies = [
 license = {file = "LICENSE"}
 
 [project.urls]
-Homepage = "https://gitlab.fht.org/davila/scops"
+Homepage = "https://github.com/CarloManenti/scOps_poetry"
